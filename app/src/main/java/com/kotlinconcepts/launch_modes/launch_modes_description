@@ -40,7 +40,7 @@ A -> B -> C
 -> If you launch B again, it will not create a new task. In the same instance of B, the onNewIntent() method will be called.
 
 5. Single instance per task
-
+"singleInstancePerTask" . The activity can only be running as the root activity of the task, the first activity that created the task, and therefore there will only be one instance of this activity in a task
 
 
 
