@@ -6,4 +6,4 @@ Standard,
 Single top,
 Single task,
 Single instance,
-Single instance per task,
+Single instance per task
