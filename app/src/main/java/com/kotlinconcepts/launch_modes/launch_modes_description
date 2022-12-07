@@ -51,6 +51,5 @@ A -> B -> C
 - > Or Java/Kotlin code using flags like this:
 val intent = Intent(activity, HomeGenericActivity::class.java).apply { addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP) }
 
-For more go to launch_modes_description text file 
 
 
