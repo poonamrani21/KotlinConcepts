@@ -1,10 +1,9 @@
 package com.kotlinconcepts.acivity_lifecycle
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.kotlinconcepts.R
-import com.kotlinconcepts.helper.LauncherUtil.launchActivity
 import com.kotlinconcepts.helper.LauncherUtil.setClassName
 import kotlinx.android.synthetic.main.activity_main.*
 
