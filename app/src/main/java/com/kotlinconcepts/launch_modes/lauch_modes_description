@@ -1,0 +1,54 @@
+# Launch Modes
+There are five types of launch modes:
+
+Standard
+Single top
+Single task
+Single instance
+Single instance per task
+
+1. Standard
+When you don't specify any launch mode, standard is the default one. It creates a new instance of the activity every time you start it. Suppose A, B, C, D, etc. are activities. It works as follows:
+The task with activities:
+# A -> B -> C
+
+2. Single top
+If an activity is at the top of the task and you create its instance again, then a new instance will not be created. Instead onNewIntent() will be called with updated data. If activity is not on top, a new instance will be pushed. See with examples:
+The task with activities:
+# A -> B -> C -> D
+-> Launch activity B. As B is not on top, a new instance will be created:
+   A -> B -> C -> B
+-> Launch activity B again. As B is on top, onNewIntent() on B will be called:
+   A -> B -> C -> B
+
+3. Single task
+If the activity doesn't exist in the task, a new instance is created otherwise onNewIntent() is called. Additionally, activities above it get destroyed. Let's understand this with examples:
+The task with activities:
+A -> B -> C
+->Start activity B with launch mode single task:
+  A -> B-> C-> B
+Now you can see that B is already there. So a new instance is not created. The onNewIntent() of B is called. Also, C were destroyed.
+
+4. Single instance
+For an activity that has a single instance launch mode, a new task is created. First, see the example, then we can explain it.
+
+The task with activities:
+A -> B -> C
+-> Launch B with launch mode single instance:
+   Task-1: A -> C -> D
+   Task-2: B
+-> If you launch B again, it will not create a new task. In the same instance of B, the onNewIntent() method will be called.
+
+5. Single instance per task
+
+
+
+
+# Note: Launch mode can be set from AndroidManifest.xml like this:
+<activity android:name=”.MainActivity”
+          android:launchMode=”singleTop” />
+
+- > Or Java/Kotlin code using flags like this:
+val intent = Intent(activity, HomeGenericActivity::class.java).apply { addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP) }
+
+

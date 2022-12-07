@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KotlinConcepts"
+        tools:targetApi="31">
+        <!--standard launch starts-->
+        <!--<activity
+            android:name=".launch_modes.standard.ActivityA"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>-->
+        <activity
+            android:name=".launch_modes.standard.ActivityB"
+            android:launchMode="standard"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="false" />
+
+        </activity>
+        <activity
+            android:name=".launch_modes.standard.ActivityC"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="false" />
+        </activity>
+        <!--standard launch end-->
+
+        <!--singleTop launch starts-->
+      <!--  <activity
+            android:name=".launch_modes.single_top.ActivityA"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>-->
+        <activity
+            android:name=".launch_modes.single_top.ActivityB"
+            android:launchMode="singleTop"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="false" />
+        </activity>
+        <activity
+            android:name=".launch_modes.single_top.ActivityC"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="false" />
+        </activity>
+        <!--singleTop launch end-->
+
+        <!--singleTask launch starts-->
+     <!--   <activity
+            android:name=".launch_modes.single_task.ActivityA"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>-->
+        <activity
+            android:name=".launch_modes.single_task.ActivityB"
+            android:launchMode="singleTask"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="false" />
+        </activity>
+        <activity
+            android:name=".launch_modes.single_task.ActivityC"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="false" />
+        </activity>
+        <!--singleTask launch end-->
+
+        <!--singleInstance launch starts-->
+        <!--<activity
+            android:name=".launch_modes.single_instance.ActivityA"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>-->
+        <activity
+            android:name=".launch_modes.single_instance.ActivityB"
+            android:launchMode="singleInstance"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="false" />
+        </activity>
+        <activity
+            android:name=".launch_modes.single_instance.ActivityC"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="false" />
+        </activity>
+        <!--singleInstance launch end-->
+
+        <!--singleInstancePerTask launch starts-->
+       <!-- <activity
+            android:name=".launch_modes.single_instance_per_task.ActivityA"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>-->
+        <activity
+            android:name=".launch_modes.single_instance_per_task.ActivityB"
+            android:launchMode="singleInstancePerTask"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="false" />
+        </activity>
+        <activity
+            android:name=".launch_modes.single_instance_per_task.ActivityC"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="false" />
+        </activity>
+        <!--singleInstancePerTask launch end-->
+        <activity
+            android:name=".launch_modes.single_instance_per_task.ActivityA"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+    </application>
+
+</manifest>
